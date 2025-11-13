@@ -1,0 +1,58 @@
+:root {
+    /* Colors */
+    --color-text: #2c2c2c;
+    --color-muted: #666;
+    --color-bg: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    --color-surface: #ffffff;
+    --color-primary: #d4af37;
+    --color-primary-dark: #b8860b;
+    --color-primary-contrast: #ffffff;
+    --color-accent: #f4e4bc;
+    --color-border: #e8e8e8;
+    --color-success: #27ae60;
+    --color-error: #e74c3c;
+    --color-dark: #2c3e50;
+    --color-warm: #f39c12;
+
+    /* Border radius */
+    --radius-sm: 6px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    --radius-full: 50%;
+
+    /* Shadows */
+    --shadow-sm: 0 2px 4px rgba(0,0,0,0.1);
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.15);
+    --shadow-lg: 0 8px 25px rgba(0,0,0,0.2);
+    --shadow-card: 0 10px 30px rgba(0,0,0,0.1);
+
+    /* Layout */
+    --container-max: 1200px;
+    --header-h: clamp(160px, 28vh, 300px);
+
+    /* Spacing */
+    --space-1: 0.5rem;
+    --space-2: 1rem;
+    --space-3: 1.5rem;
+    --space-4: 2rem;
+    --space-5: 2.5rem;
+    --space-6: 3rem;
+
+    /* Typography */
+    --font-base: 'Arial', sans-serif;
+    --font-size-sm: clamp(0.875rem, 0.8rem + 0.2vw, 0.95rem);
+    --font-size-md: clamp(1rem, 0.9rem + 0.5vw, 1.125rem);
+    --font-size-lg: clamp(1.25rem, 1rem + 1vw, 1.75rem);
+    --font-size-xl: clamp(1.75rem, 1.2rem + 2vw, 3rem);
+    --font-weight-normal: 300;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+
+    /* Transitions */
+    --transition-fast: 0.2s ease;
+    --transition-normal: 0.3s ease;
+
+    /* Z-index */
+    --z-header: 1000;
+}
+

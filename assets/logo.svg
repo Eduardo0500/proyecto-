@@ -1,0 +1,29 @@
+<svg width="56" height="56" viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#D4AF37;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#B8860B;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8B6914;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Círculo exterior -->
+  <circle cx="28" cy="28" r="26" fill="none" stroke="url(#goldGradient)" stroke-width="3" stroke-dasharray="0 0 0 0" />
+  
+  <!-- Taza de café -->
+  <path d="M18 20 L18 35 L25 35 L25 38 L30 38 L30 35 L37 35 L37 20 Z" fill="url(#goldGradient)" />
+  
+  <!-- Asa de la taza -->
+  <path d="M37 25 Q42 25 42 30 Q42 35 37 35" fill="none" stroke="url(#goldGradient)" stroke-width="2" />
+  
+  <!-- Granos de café -->
+  <ellipse cx="24" cy="28" rx="2" ry="1.5" fill="#8B6914" />
+  <ellipse cx="26" cy="30" rx="1.5" ry="1" fill="#8B6914" />
+  
+  <!-- Vapor -->
+  <path d="M20 15 Q22 12 24 15 Q26 10 28 15 Q30 8 32 15 Q34 12 36 15" fill="none" stroke="url(#goldGradient)" stroke-width="1.5" opacity="0.8" />
+  
+  <!-- Hojas decorativas en el vapor -->
+  <path d="M22 12 Q23 10 24 12 Q25 9 26 12" fill="url(#goldGradient)" opacity="0.6" />
+  <path d="M30 10 Q31 8 32 10 Q33 7 34 10" fill="url(#goldGradient)" opacity="0.6" />
+</svg>

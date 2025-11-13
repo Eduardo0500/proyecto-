@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Sync - Alimentos</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <img src="../assets/logo.svg" alt="Coffee Shop Logo" class="logo">
+            <h1>coffee sync</h1>
+        </div>
+    </header>
+
+    <nav class="nav">
+        <ul class="nav-list">
+            <li class="nav-item"><a href="bebidas.html">Bebidas</a></li>
+            <li class="nav-item"><a href="alimentos.html" class="active">Alimentos</a></li>
+            <li class="nav-item"><a href="../index.html">Inicio</a></li>
+            <li class="nav-item"><a href="creacion_alimentos.html">Creacion de desayunos</a></li>
+        </ul>
+    </nav>
+
+    <main class="main">
+        <section id="alimentos" class="section" aria-labelledby="alimentos-title">
+            <header>
+                <h2 id="alimentos-title" class="section-title">Alimentos</h2>
+            </header>
+            
+            <div class="intro-text">
+                <p>Disfruta de nuestros deliciosos alimentos frescos, preparados diariamente con ingredientes de la más alta calidad.</p>
+            </div>
+
+            <!-- Buscador y Filtros -->
+            <div class="search-filters">
+                <div class="search-container">
+                    <div class="search-box">
+                        <input type="text" id="searchInput" placeholder="Buscar alimentos por nombre..." class="search-input">
+                        <span class="search-icon">🔍</span>
+                    </div>
+                </div>
+                
+                <div class="filters-container">
+                    <div class="filter-group">
+                        <label for="categoryFilter">Categoría:</label>
+                        <select id="categoryFilter" class="filter-select">
+                            <option value="">Todas las categorías</option>
+                            <option value="desayuno">Desayunos</option>
+                            <option value="sandwich">Sandwiches</option>
+                            <option value="pan">Pan</option>
+                            <option value="corviche">Corviches</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label for="sortBy">Ordenar por:</label>
+                        <select id="sortBy" class="filter-select">
+                            <option value="name-asc">Nombre (A-Z)</option>
+                            <option value="name-desc">Nombre (Z-A)</option>
+                            <option value="price-asc">Precio (Menor a Mayor)</option>
+                            <option value="price-desc">Precio (Mayor a Menor)</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="menu-grid" role="list" aria-label="Catálogo de alimentos">
+                <article class="menu-item" role="listitem" data-item-id="desayuno-1" data-category="desayuno">
+                    <figure class="menu-item-image" style="background-image: url('../assets/imagen/desayuno.jpg')" aria-label="Imagen de croissant">
+                    </figure>
+                    <div class="menu-item-content">
+                        <header>
+                            <h3 class="menu-item-title">desayuno</h3>
+                        </header>
+                        <p class="menu-item-description">Disfruta de un completo desayuno americano con esponjosos panqueques, salchichas, tocino y huevos, la forma perfecta de empezar tu día.</p>
+                        <span class="price">$3.25</span>
+                        <div class="item-actions">
+                            <button class="btn btn-details" data-item="desayuno-1">Ver Detalles</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="menu-item" role="listitem" data-item-id="desayuno-nutritivo-1" data-category="desayuno">
+                    <figure class="menu-item-image" style="background-image: url('../assets/imagen/desayuno-saludable\ .jpg')" aria-label="Imagen de muffin">
+                    </figure>
+                    <div class="menu-item-content">
+                        <header>
+                            <h3 class="menu-item-title">desayuno nutritivo</h3>
+                        </header>
+                        <p class="menu-item-description">Empieza tu día con energía con este nutritivo y delicioso tazón de avena, cargado de frutas, frutos secos y chía.</p>
+                        <span class="price">$3.25</span>
+                        <div class="item-actions">
+                            <button class="btn btn-details" data-item="desayuno-nutritivo-1">Ver Detalles</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="menu-item" role="listitem" data-item-id="desayuno-nutritivo-2" data-category="desayuno">
+                    <figure class="menu-item-image" style="background-image: url('../assets/imagen/desayuno-pan.jpg')" aria-label="Imagen de bagel">
+                    </figure>
+                    <div class="menu-item-content">
+                        <header>
+                            <h3 class="menu-item-title">desayuno nutritivo</h3>
+                        </header>
+                        <p class="menu-item-description">Un desayuno nutritivo y delicioso con tostadas doradas, un huevo frito, aguacate, espinacas y frambuesas para empezar el día con energía</p>
+                        <span class="price">$3.00</span>
+                        <div class="item-actions">
+                            <button class="btn btn-details" data-item="desayuno-nutritivo-2">Ver Detalles</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="menu-item" role="listitem" data-item-id="sandwich-1" data-category="sandwich">
+                    <figure class="menu-item-image" style="background-image: url('../assets/imagen/sandwich.webp')" aria-label="Imagen de sandwich">
+                    </figure>
+                    <div class="menu-item-content">
+                        <header>
+                            <h3 class="menu-item-title">Sandwich</h3>
+                        </header>
+                        <p class="menu-item-description">Sandwiches preparados con ingredientes frescos y de calidad premium. Perfectos para acompañar tu café favorito.</p>
+                        <span class="price">$2.50</span>
+                        <div class="item-actions">
+                            <button class="btn btn-details" data-item="sandwich-1">Ver Detalles</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="menu-item" role="listitem" data-item-id="pan-1" data-category="pan">
+                    <figure class="menu-item-image" style="background-image: url('../assets/imagen/pan.webp')" aria-label="Imagen de tartas">
+                    </figure>
+                    <div class="menu-item-content">
+                        <header>
+                            <h3 class="menu-item-title">Pan</h3>
+                        </header>
+                        <p class="menu-item-description">Prueba nuestros Pan, dorados y crujientes a la perfección, una delicia de mantequilla que te transportará</p>
+                        <span class="price">$0.50</span>
+                        <div class="item-actions">
+                            <button class="btn btn-details" data-item="pan-1">Ver Detalles</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="menu-item" role="listitem" data-item-id="corviche-1" data-category="corviche">
+                    <figure class="menu-item-image" style="background-image: url('../assets/imagen/corviche.jpg')" aria-label="Imagen de quiche">
+                    </figure>
+                    <div class="menu-item-content">
+                        <header>
+                            <h3 class="menu-item-title">Corviche</h3>
+                        </header>
+                        <p class="menu-item-description">Prueba nuestro corviche, una deliciosa croqueta de plátano verde rellena de pescado, perfectamente dorada y crujiente</p>
+                        <span class="price">$0.60</span>
+                        <div class="item-actions">
+                            <button class="btn btn-details" data-item="corviche-1">Ver Detalles</button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Coffee Sync. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Modal de detalles del producto -->
+    <div id="productDetailModal" class="modal modern-modal">
+        <div class="modal-content modern-modal-content">
+            <div class="modal-header modern-header">
+                <div class="header-content">
+                    <h3 id="detailProductName" class="product-title">Detalles del Producto</h3>
+                    <span id="detailProductCategory" class="product-category">Categoría</span>
+                </div>
+                <button class="close-btn modern-close" aria-label="Cerrar modal">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            <div class="modal-body modern-body">
+                <div class="product-detail-content modern-layout">
+                    <div class="product-detail-image modern-image-container">
+                        <div id="detailProductImage" class="detail-image modern-image"></div>
+                    </div>
+                    <div class="product-detail-info modern-info">
+                        <div class="product-header">
+                            <h4 id="detailProductTitle" class="product-name">Nombre del Producto</h4>
+                            <div class="product-price-container">
+                                <span id="detailProductPrice" class="detail-price modern-price">$0.00</span>
+                            </div>
+                        </div>
+                        <p id="detailProductDescription" class="product-description">Descripción del producto</p>
+                        
+                        <div class="product-ingredients modern-ingredients">
+                            <div class="ingredients-header">
+                                <h5 class="ingredients-title">Ingredientes</h5>
+                                <span class="ingredients-subtitle">Personaliza tu pedido</span>
+                            </div>
+                            
+                            <div class="ingredients-content">
+                                <ul id="detailProductIngredients" class="ingredients-list modern-list">
+                                    <!-- Los ingredientes se cargarán dinámicamente -->
+                                </ul>
+                                
+                                <!-- Sección para agregar ingredientes personalizados -->
+                                <div class="add-ingredients-section modern-add-section">
+                                    <div class="add-section-header">
+                                        <h6 class="add-title">Agregar ingredientes</h6>
+                                        <span class="add-subtitle">Haz tu pedido único</span>
+                                    </div>
+                                    <div class="ingredient-input-row modern-input-row">
+                                        <div class="input-group">
+                                            <label for="ingredientName" class="input-label">Ingrediente</label>
+                                            <input type="text" id="ingredientName" placeholder="Ej: Queso extra" class="ingredient-input modern-input">
+                                        </div>
+                                        <div class="input-group">
+                                            <label for="ingredientQuantity" class="input-label">Cantidad</label>
+                                            <input type="number" id="ingredientQuantity" placeholder="1" min="1" class="ingredient-input modern-input">
+                                        </div>
+                                        <div class="input-group">
+                                            <label for="ingredientUnit" class="input-label">Unidad</label>
+                                            <select id="ingredientUnit" class="ingredient-select modern-select">
+                                                <option value="unidades">Unidades</option>
+                                                <option value="gramos">Gramos</option>
+                                                <option value="ml">ML</option>
+                                                <option value="cucharadas">Cucharadas</option>
+                                                <option value="tazas">Tazas</option>
+                                            </select>
+                                        </div>
+                                        <button class="btn btn-ingredient-add modern-add-btn" id="addIngredientBtn" aria-label="Agregar ingrediente">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <line x1="12" y1="5" x2="12" y2="19"></line>
+                                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="product-actions modern-actions">
+                            <div class="quantity-selector modern-quantity">
+                                <label for="productQuantity" class="quantity-label">Cantidad</label>
+                                <div class="quantity-controls modern-controls">
+                                    <button class="btn-quantity modern-quantity-btn" id="decreaseQuantity" aria-label="Disminuir cantidad">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                                        </svg>
+                                    </button>
+                                    <input type="number" id="productQuantity" value="1" min="1" max="10" class="quantity-input modern-quantity-input">
+                                    <button class="btn-quantity modern-quantity-btn" id="increaseQuantity" aria-label="Aumentar cantidad">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <line x1="12" y1="5" x2="12" y2="19"></line>
+                                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <button class="btn btn-primary btn-add-to-cart modern-cart-btn" id="addToCartBtn">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="9" cy="21" r="1"></circle>
+                                    <circle cx="20" cy="21" r="1"></circle>
+                                    <path d="m1 1 4 4 13 1 4 8H6l-2-4z"></path>
+                                </svg>
+                                Agregar al pedido
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para agregar ingredientes -->
+    <div id="ingredientsModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Agregar Ingredientes</h3>
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <form id="ingredientsForm">
+                    <div class="form-group">
+                        <label for="ingredientName">Nombre del Ingrediente:</label>
+                        <input type="text" id="ingredientName" name="ingredientName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="ingredientQuantity">Cantidad:</label>
+                        <input type="number" id="ingredientQuantity" name="ingredientQuantity" min="0" step="0.1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="ingredientUnit">Unidad:</label>
+                        <select id="ingredientUnit" name="ingredientUnit" required>
+                            <option value="">Seleccionar unidad</option>
+                            <option value="gramos">Gramos (g)</option>
+                            <option value="kilogramos">Kilogramos (kg)</option>
+                            <option value="litros">Litros (L)</option>
+                            <option value="mililitros">Mililitros (ml)</option>
+                            <option value="tazas">Tazas</option>
+                            <option value="cucharadas">Cucharadas</option>
+                            <option value="cucharaditas">Cucharaditas</option>
+                            <option value="unidades">Unidades</option>
+                            <option value="piezas">Piezas</option>
+                        </select>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">Agregar Ingrediente</button>
+                        <button type="button" class="btn btn-secondary" id="cancelIngredients">Cancelar</button>
+                    </div>
+                </form>
+                <div id="ingredientsList" class="ingredients-list">
+                    <h4>Ingredientes actuales:</h4>
+                    <ul id="ingredientsUl"></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script type="module" src="../js/app.js"></script>
+</body>
+</html>

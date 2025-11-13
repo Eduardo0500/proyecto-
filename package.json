@@ -1,0 +1,13 @@
+{
+  "name": "practica4",
+  "version": "1.0.0",
+  "description": "Proyecto con login y validaciones frontend",
+  "main": "js/app.js",
+  "scripts": {
+    "start": "echo \"Abrir index.html en el navegador\"",
+    "dev": "echo \"Proyecto estático, sin backend\"",
+    "test": "echo \"Sin tests automáticos\""
+  },
+  "author": "Jordy Macias y Eduardo Anchundia",
+  "license": "ISC"
+}

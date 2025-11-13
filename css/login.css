@@ -1,0 +1,518 @@
+/* Estilos específicos para la página de login */
+
+/* Sección de login */
+.login-section {
+    max-width: 500px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.login-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.login-title {
+    font-size: 2.5rem;
+    color: var(--color-text);
+    margin-bottom: 0.5rem;
+    font-weight: 300;
+    position: relative;
+}
+
+.login-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: var(--color-primary);
+    border-radius: 2px;
+}
+
+.login-subtitle {
+    color: var(--color-text-light);
+    font-size: 1.1rem;
+    margin-top: 1rem;
+}
+
+/* Contenedor del formulario */
+.login-form-container {
+    background: var(--color-white);
+    border-radius: 16px;
+    box-shadow: var(--shadow-card);
+    padding: 2.5rem;
+    border: 1px solid var(--color-border);
+    position: relative;
+}
+
+.login-form-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+    border-radius: 16px 16px 0 0;
+}
+
+/* Formulario de login */
+.login-form {
+    margin-bottom: 2rem;
+}
+
+.form-fieldset {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+.form-legend {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--color-text);
+    margin-bottom: 1.5rem;
+    text-align: center;
+    position: relative;
+}
+
+.form-legend::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 2px;
+    background-color: var(--color-primary);
+    border-radius: 1px;
+}
+
+/* Grupos de formulario */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-label {
+    display: block;
+    font-weight: 600;
+    color: var(--color-text);
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+.form-input {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid var(--color-border);
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: all 0.3s ease;
+    background: var(--color-white);
+    box-sizing: border-box;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
+    background: rgba(212, 175, 55, 0.02);
+}
+
+.form-input:invalid {
+    border-color: #e74c3c;
+}
+
+.form-input:valid {
+    border-color: #27ae60;
+}
+
+.form-help {
+    display: block;
+    margin-top: 0.5rem;
+    color: var(--color-text-light);
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+/* Opciones del formulario */
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 0.95rem;
+    color: var(--color-text-light);
+}
+
+.checkbox-input {
+    margin-right: 0.5rem;
+    width: 18px;
+    height: 18px;
+    accent-color: var(--color-primary);
+}
+
+.checkbox-text {
+    font-weight: 500;
+}
+
+.forgot-link {
+    color: var(--color-primary);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.forgot-link:hover {
+    color: var(--color-primary-dark);
+    text-decoration: underline;
+}
+
+/* Botón de login */
+.btn-login {
+    width: 100%;
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.btn-login:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-card);
+}
+
+.btn-login:active {
+    transform: translateY(0);
+}
+
+.btn-login:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Divisor */
+.login-divider {
+    position: relative;
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.login-divider::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: var(--color-border);
+}
+
+.divider-text {
+    background: var(--color-white);
+    color: var(--color-text-light);
+    padding: 0 1rem;
+    font-size: 0.9rem;
+    position: relative;
+    z-index: 1;
+}
+
+/* Sección de registro */
+.register-section {
+    text-align: center;
+}
+
+.register-text {
+    color: var(--color-text-light);
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.btn-register {
+    display: inline-block;
+    background: transparent;
+    color: var(--color-primary);
+    border: 2px solid var(--color-primary);
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.btn-register:hover {
+    background: var(--color-primary);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
+}
+
+/* Mensajes de error y validación en tiempo real */
+.error-message {
+    color: #e74c3c;
+    font-size: 0.85rem;
+    margin-top: 0.5rem;
+    display: block;
+    font-weight: 500;
+    padding: 0.3rem 0.5rem;
+    background: rgba(231, 76, 60, 0.05);
+    border-left: 3px solid #e74c3c;
+    border-radius: 0 4px 4px 0;
+    animation: slideInError 0.3s ease-out;
+}
+
+.success-message {
+    color: #27ae60;
+    font-size: 0.85rem;
+    margin-top: 0.5rem;
+    display: block;
+    font-weight: 500;
+    padding: 0.3rem 0.5rem;
+    background: rgba(39, 174, 96, 0.05);
+    border-left: 3px solid #27ae60;
+    border-radius: 0 4px 4px 0;
+    animation: slideInSuccess 0.3s ease-out;
+}
+
+/* Animaciones para mensajes */
+@keyframes slideInError {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInSuccess {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estados de validación mejorados */
+.form-group.error .form-input {
+    border-color: #e74c3c;
+    box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.1);
+    background: rgba(231, 76, 60, 0.02);
+    animation: shake 0.5s ease-in-out;
+}
+
+.form-group.success .form-input {
+    border-color: #27ae60;
+    box-shadow: 0 0 0 3px rgba(39, 174, 96, 0.1);
+    background: rgba(39, 174, 96, 0.02);
+}
+
+/* Animación de shake para errores */
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+    20%, 40%, 60%, 80% { transform: translateX(5px); }
+}
+
+/* Indicadores visuales adicionales */
+.form-input:focus.error {
+    border-color: #e74c3c;
+    box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.2);
+}
+
+.form-input:focus.success {
+    border-color: #27ae60;
+    box-shadow: 0 0 0 3px rgba(39, 174, 96, 0.2);
+}
+
+/* Iconos para estados de validación */
+.form-group.error .form-input::after {
+    content: "⚠️";
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.form-group.success .form-input::after {
+    content: "✅";
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Mejoras para mensajes de ayuda */
+.form-help {
+    display: block;
+    margin-top: 0.5rem;
+    color: var(--color-text-light);
+    font-size: 0.85rem;
+    font-style: italic;
+    transition: all 0.3s ease;
+}
+
+.form-group.error .form-help {
+    color: #e74c3c;
+    font-weight: 500;
+}
+
+.form-group.success .form-help {
+    color: #27ae60;
+    font-weight: 500;
+}
+
+/* Estilos para checkboxes con validación */
+.checkbox-label {
+    display: flex;
+    align-items: flex-start;
+    cursor: pointer;
+    font-size: 0.95rem;
+    color: var(--color-text-light);
+    transition: all 0.3s ease;
+    padding: 0.5rem;
+    border-radius: 6px;
+    margin-bottom: 0.5rem;
+}
+
+.checkbox-label:hover {
+    background: rgba(212, 175, 55, 0.05);
+}
+
+.checkbox-label.error {
+    background: rgba(231, 76, 60, 0.05);
+    border-left: 3px solid #e74c3c;
+    padding-left: 0.8rem;
+}
+
+.checkbox-label.success {
+    background: rgba(39, 174, 96, 0.05);
+    border-left: 3px solid #27ae60;
+    padding-left: 0.8rem;
+}
+
+.checkbox-input {
+    margin-right: 0.5rem;
+    width: 18px;
+    height: 18px;
+    accent-color: var(--color-primary);
+    margin-top: 0.1rem;
+    flex-shrink: 0;
+}
+
+.checkbox-text {
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+/* Estados de validación para checkboxes */
+.form-options.error .checkbox-label {
+    color: #e74c3c;
+    font-weight: 600;
+}
+
+.form-options.success .checkbox-label {
+    color: #27ae60;
+    font-weight: 600;
+}
+
+/* Animación para checkboxes */
+.checkbox-input:checked {
+    animation: checkPulse 0.3s ease;
+}
+
+@keyframes checkPulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+/* Estilos adicionales para formularios de registro */
+.terms-link {
+    color: var(--color-primary);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.terms-link:hover {
+    text-decoration: underline;
+}
+
+/* Múltiples secciones de registro */
+.register-section + .register-section {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--color-border);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .login-section {
+        margin: 1rem auto;
+        padding: 0 0.5rem;
+    }
+    
+    .login-form-container {
+        padding: 1.5rem;
+    }
+    
+    .login-title {
+        font-size: 2rem;
+    }
+    
+    .form-options {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .login-form-container {
+        padding: 1rem;
+        margin: 0.5rem;
+    }
+    
+    .login-title {
+        font-size: 1.8rem;
+    }
+    
+    .form-input {
+        padding: 0.8rem;
+    }
+    
+    .btn-login,
+    .btn-register {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+    }
+}

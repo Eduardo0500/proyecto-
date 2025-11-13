@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Sync - Nuestro Menú</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <img src="assets/logo.svg" alt="Coffee Shop Logo" class="logo">
+            <h1>coffee sync</h1>
+        </div>
+    </header>
+
+    <nav class="nav">
+        <ul class="nav-list">
+            <li class="nav-item"><a href="pag/bebidas.html">Bebidas</a></li>
+            <li class="nav-item"><a href="pag/alimentos.html">Alimentos</a></li>
+            <li class="nav-item"><a href="pag/creacion_alimentos.html">Creacion de desayunos</a></li>
+            <li class="nav-item"><a href="pag/login.html">Login</a></li>
+        </ul>
+    </nav>
+
+    <main class="main">
+        <section id="welcome" class="section" aria-labelledby="welcome-title">
+            <header>
+                <h2 id="welcome-title" class="section-title">Bienvenidos a Coffee Sync</h2>
+            </header>
+            
+            <div class="intro-text">
+                <p>
+                    Descubre el mundo de Coffee Sync. Ofrecemos una experiencia única con granos cuidadosamente seleccionados, 
+                    bebidas artesanales y deliciosos alimentos frescos. Navega por nuestras secciones para conocer todo lo que tenemos para ofrecerte.
+                </p>
+            </div>
+            
+            <div class="menu-grid" role="list" aria-label="Categorías principales del menú">
+                <article class="menu-item" role="listitem">
+                    <figure class="menu-item-image" style="background-image: url('assets/imagen/capuchino.webp');" aria-label="Imagen de café de especialidad">
+                    </figure>
+                    <div class="menu-item-content">
+                        <header>
+                            <h3 class="menu-item-title">Café de Especialidad</h3>
+                        </header>
+                        <p class="menu-item-description">Descubre nuestra selección de cafés de especialidad, preparados con granos cuidadosamente seleccionados y tostados artesanalmente.</p>
+                        <a href="pag/bebidas.html" class="menu-link" aria-label="Ver más sobre café de especialidad">Ver más →</a>
+                    </div>
+                </article>
+
+                <article class="menu-item" role="listitem">
+                    <figure class="menu-item-image" style="background-image: url('assets/imagen/jugos.jpg');" aria-label="Imagen de bebidas artesanales">
+                    </figure>
+                    <div class="menu-item-content">
+                        <header>
+                            <h3 class="menu-item-title">Bebidas Naturales</h3>
+                        </header>
+                        <p class="menu-item-description">Explora nuestra variedad de bebidas calientes y frías, desde espresso clásico hasta creaciones únicas con arte latte.</p>
+                        <a href="pag/bebidas.html" class="menu-link" aria-label="Ver catálogo de bebidas">Ver más →</a>
+                    </div>
+                </article>
+
+                <article class="menu-item" role="listitem">
+                    <figure class="menu-item-image" style="background-image: url('assets/imagen/desayuno.jpg');" aria-label="Imagen de alimentos frescos">
+                    </figure>
+                    <div class="menu-item-content">
+                        <header>
+                            <h3 class="menu-item-title">desayuno caseros </h3>
+                        </header>
+                        <p class="menu-item-description">Disfruta de nuestros deliciosos desayunos caseros, desde pasteles artesanales hasta sandwiches gourmet.</p>
+                        <a href="pag/alimentos.html" class="menu-link" aria-label="Ver catálogo de alimentos">Ver más →</a>
+                    </div>
+                </article>
+
+                <article class="menu-item" role="listitem">
+                    <figure class="menu-item-image" style="background-image: url('assets/imagen/desayuno-saludable .jpg');" aria-label="Imagen de granos premium">
+                    </figure>
+                    <div class="menu-item-content">
+                        <header>
+                            <h3 class="menu-item-title">desayuno saludable</h3>
+                        </header>
+                        <p class="menu-item-description">Lleva a casa la experiencia Coffee Sync con nuestros granos de café premium, perfectos para preparar en casa.</p>
+                        <a href="pag/alimentos.html" class="menu-link" aria-label="Ver más sobre granos premium">Ver más →</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Coffee Shop. Disfruta tu desayuno deliciosos y pide a tu gusto.</p>
+    </footer>
+
+    <script type="module" src="js/app.js"></script>
+</body>
+</html>

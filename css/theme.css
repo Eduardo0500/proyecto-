@@ -1,0 +1,14 @@
+body {
+    font-family: var(--font-base);
+    line-height: 1.6;
+    color: var(--color-text);
+    background: var(--color-bg);
+    min-height: 100vh;
+}
+
+h1, h2, h3 { color: var(--color-text); }
+p { color: var(--color-muted); }
+
+a { color: var(--color-accent); }
+a:hover { color: var(--color-primary); }
+

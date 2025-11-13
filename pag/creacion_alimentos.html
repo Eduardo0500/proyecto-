@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Sync - Creación Personalizada</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        /* Estilos para las pestañas */
+        .page-header {
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .page-title {
+            font-size: 2.5rem;
+            color: #8B4513;
+            margin-bottom: 0.5rem;
+        }
+
+        .page-subtitle {
+            font-size: 1.1rem;
+            color: #666;
+        }
+
+        .category-nav {
+            display: flex;
+            justify-content: center;
+            margin: 2rem 0;
+            border-bottom: 2px solid #e0e0e0;
+        }
+
+        .tab-button {
+            background: none;
+            border: none;
+            padding: 1rem 2rem;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s ease;
+            border-bottom: 3px solid transparent;
+        }
+
+        .tab-button:hover {
+            background-color: #f5f5f5;
+        }
+
+        .tab-button.active {
+            border-bottom-color: #8B4513;
+            background-color: #f9f9f9;
+        }
+
+        .tab-icon {
+            font-size: 1.5rem;
+        }
+
+        .tab-text {
+            font-weight: 500;
+            color: #333;
+        }
+
+        .tab-panel {
+            display: none;
+        }
+
+        .tab-panel.active {
+            display: block;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            color: #8B4513;
+            margin-bottom: 0.5rem;
+        }
+
+        .section-description {
+            font-size: 1rem;
+            color: #666;
+        }
+
+        .creation-section {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .size-options {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .size-card .option-detail {
+            font-size: 0.8rem;
+            color: #666;
+            margin-top: 0.25rem;
+        }
+
+        .btn-icon {
+            margin-right: 0.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .category-nav {
+                flex-wrap: wrap;
+            }
+            
+            .tab-button {
+                flex: 1;
+                min-width: 120px;
+            }
+            
+            .page-title {
+                font-size: 2rem;
+            }
+            
+            .creation-section {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <img src="../assets/logo.svg" alt="Coffee Shop Logo" class="logo">
+            <h1>coffee sync</h1>
+        </div>
+    </header>
+
+    <nav class="nav">
+        <ul class="nav-list">
+            <li class="nav-item"><a href="bebidas.html">Bebidas</a></li>
+            <li class="nav-item"><a href="alimentos.html">Alimentos</a></li>
+            <li class="nav-item"><a href="../index.html">Inicio</a></li>
+            <li class="nav-item"><a href="creacion_alimentos.html" class="active">Creación Personalizada</a></li>
+        </ul>
+    </nav>
+
+    <main class="main">
+        <header class="page-header">
+            <h1 class="page-title">Crea tu Pedido Personalizado</h1>
+            <p class="page-subtitle">Elige entre nuestras diferentes categorías y personaliza tu pedido</p>
+        </header>
+
+        <!-- Navegación por pestañas -->
+        <nav class="category-nav" role="tablist" aria-label="Categorías de productos">
+            <button class="tab-button active" role="tab" aria-selected="true" aria-controls="jugos-panel" id="jugos-tab">
+                <span class="tab-icon">🥤</span>
+                <span class="tab-text">Jugos</span>
+            </button>
+            <button class="tab-button" role="tab" aria-selected="false" aria-controls="alimentos-panel" id="alimentos-tab">
+                <span class="tab-icon">🍳</span>
+                <span class="tab-text">Alimentos</span>
+            </button>
+            <button class="tab-button" role="tab" aria-selected="false" aria-controls="bebidas-panel" id="bebidas-tab">
+                <span class="tab-icon">☕</span>
+                <span class="tab-text">Bebidas Calientes</span>
+            </button>
+        </nav>
+
+        <!-- Panel de Jugos -->
+        <section id="jugos-panel" class="tab-panel active" role="tabpanel" aria-labelledby="jugos-tab">
+            <article class="creation-section">
+                <header class="section-header">
+                    <h2 class="section-title">Crea tu Jugo Perfecto</h2>
+                    <p class="section-description">Combina frutas frescas y crea tu bebida ideal</p>
+                </header>
+
+                <form class="creation-form" action="#" method="post" aria-label="Formulario para crear jugo personalizado">
+                    <fieldset class="form-section" aria-labelledby="base-fruta-legend">
+                        <legend id="base-fruta-legend" class="form-legend">Elige tu Fruta Base</legend>
+                        <div class="options-grid" role="radiogroup" aria-labelledby="base-fruta-legend">
+                            <article class="option-card">
+                                <label for="naranja">
+                                    <input type="radio" id="naranja" name="fruta-base" value="naranja" required>
+                                    <div class="option-content">
+                                        <figure class="option-icon" aria-hidden="true">🍊</figure>
+                                        <span class="option-text">Naranja</span>
+                                    </div>
+                                </label>
+                            </article>
+                            
+                            <article class="option-card">
+                                <label for="mora">
+                                    <input type="radio" id="mora" name="fruta-base" value="mora">
+                                    <div class="option-content">
+                                        <figure class="option-icon" aria-hidden="true">🫐</figure>
+                                        <span class="option-text">Mora</span>
+                                    </div>
+                                </label>
+                            </article>
+                            
+                            <article class="option-card">
+                                <label for="mango">
+                                    <input type="radio" id="mango" name="fruta-base" value="mango">
+                                    <div class="option-content">
+                                        <figure class="option-icon" aria-hidden="true">🥭</figure>
+                                        <span class="option-text">Mango</span>
+                                    </div>
+                                </label>
+                            </article>
+
+                            <article class="option-card">
+                                <label for="fresa">
+                                    <input type="radio" id="fresa" name="fruta-base" value="fresa">
+                                    <div class="option-content">
+                                        <figure class="option-icon" aria-hidden="true">🍓</figure>
+                                        <span class="option-text">Fresa</span>
+                                    </div>
+                                </label>
+                            </article>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="form-section" aria-labelledby="extras-jugo-legend">
+                        <legend id="extras-jugo-legend" class="form-legend">Añade Extras</legend>
+                        <div class="checkbox-group" role="group" aria-labelledby="extras-jugo-legend">
+                            <article class="checkbox-option">
+                                <label for="hielo">
+                                    <input type="checkbox" id="hielo" name="extras-jugo" value="hielo">
+                                    <span class="checkbox-text">Hielo</span>
+                                </label>
+                            </article>
+                            
+                            <article class="checkbox-option">
+                                <label for="azucar">
+                                    <input type="checkbox" id="azucar" name="extras-jugo" value="azucar">
+                                    <span class="checkbox-text">Azúcar</span>
+                                </label>
+                            </article>
+                            
+                            <article class="checkbox-option">
+                                <label for="miel">
+                                    <input type="checkbox" id="miel" name="extras-jugo" value="miel">
+                                    <span class="checkbox-text">Miel</span>
+                                </label>
+                            </article>
+
+                            <article class="checkbox-option">
+                                <label for="leche">
+                                    <input type="checkbox" id="leche" name="extras-jugo" value="leche">
+                                    <span class="checkbox-text">Leche</span>
+                                </label>
+                            </article>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="form-section" aria-labelledby="tamano-jugo-legend">
+                        <legend id="tamano-jugo-legend" class="form-legend">Tamaño</legend>
+                        <div class="options-grid size-options" role="radiogroup" aria-labelledby="tamano-jugo-legend">
+                            <article class="option-card size-card">
+                                <label for="pequeno-jugo">
+                                    <input type="radio" id="pequeno-jugo" name="tamano-jugo" value="pequeno" required>
+                                    <div class="option-content">
+                                        <figure class="option-icon" aria-hidden="true">🥤</figure>
+                                        <span class="option-text">Pequeño</span>
+                                        <span class="option-detail">250ml</span>
+                                    </div>
+                                </label>
+                            </article>
+                            
+                            <article class="option-card size-card">
+                                <label for="mediano-jugo">
+                                    <input type="radio" id="mediano-jugo" name="tamano-jugo" value="mediano">
+                                    <div class="option-content">
+                                        <figure class="option-icon" aria-hidden="true">🥤</figure>
+                                        <span class="option-text">Mediano</span>
+                                        <span class="option-detail">350ml</span>
+                                    </div>
+                                </label>
+                            </article>
+                            
+                            <article class="option-card size-card">
+                                <label for="grande-jugo">
+                                    <input type="radio" id="grande-jugo" name="tamano-jugo" value="grande">
+                                    <div class="option-content">
+                                        <figure class="option-icon" aria-hidden="true">🥤</figure>
+                                        <span class="option-text">Grande</span>
+                                        <span class="option-detail">500ml</span>
+                                    </div>
+                                </label>
+                            </article>
+                        </div>
+                    </fieldset>
+
+                    <footer class="form-actions">
+                        <button type="submit" class="btn-primary">
+                            <span class="btn-icon">🥤</span>
+                            Añadir Jugo al Carrito
+                        </button>
+                    </footer>
+                </form>
+            </article>
+        </section>
+
+        <!-- Panel de Alimentos -->
+        <section id="alimentos-panel" class="tab-panel" role="tabpanel" aria-labelledby="alimentos-tab">
+            <article class="creation-section">
+                <header class="section-header">
+                    <h2 class="section-title">Crea tu Desayuno Perfecto</h2>
+                    <p class="section-description">Personaliza tu comida tal y como te gusta</p>
+                </header>
+
+                <form class="creation-form" action="#" method="post" aria-label="Formulario para crear desayuno personalizado">
+                    <fieldset class="form-section" aria-labelledby="base-alimento-legend">
+                        <legend id="base-alimento-legend" class="form-legend">Elige tu Base</legend>
+                        <div class="options-grid" role="radiogroup" aria-labelledby="base-alimento-legend">
+                            <article class="option-card">
+                                <label for="pan">
+                                    <input type="radio" id="pan" name="base-alimento" value="pan" required>
+                                    <div class="option-content">
+                                        <figure class="option-icon" aria-hidden="true">🍞</figure>
+                                        <span class="option-text">Pan</span>
+                                    </div>
+                                </label>
+                            </article>
+                            
+                            <article class="option-card">
+                                <label for="croissant-alimento">
+                                    <input type="radio" id="croissant-alimento" name="base-alimento" value="croissant">
+                                    <div class="option-content">
+                                        <figure class="option-icon" aria-hidden="true">🥐</figure>
+                                        <span class="option-text">Croissant</span>
+                                    </div>
+                                </label>
+                            </article>
+                            
+                            <article class="option-card">
+                                <label for="arepa">
+                                    <input type="radio" id="arepa" name="base-alimento" value="arepa">
+                                    <div class="option-content">
+                                        <figure class="option-icon" aria-hidden="true">🫓</figure>
+                                        <span class="option-text">Arepa</span>
+                                    </div>
+                                </label>
+                            </article>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="form-section" aria-labelledby="proteina-legend">
+                        <legend id="proteina-legend" class="form-legend">Selecciona tu Proteína</legend>
+                        <div class="options-grid" role="radiogroup" aria-labelledby="proteina-legend">
+                            <article class="option-card">
+                                <label for="huevos-revueltos">
+                                    <input type="radio" id="huevos-revueltos" name="proteina" value="huevos-revueltos" required>
+                                    <div class="option-content">
+                                        <figure class="option-icon" aria-hidden="true">🍳</figure>
+                                        <span class="option-text">Huevos Revueltos</span>
+                                    </div>
+                                </label>
+                            </article>
+                            
+                            <article class="option-card">
+                                <label for="huevos-estrellados">
+                                    <input type="radio" id="huevos-estrellados" name="proteina" value="huevos-estrellados">
+                                    <div class="option-content">
+                                        <figure class="option-icon" aria-hidden="true">🍳</figure>
+                                        <span class="option-text">Huevos Estrellados</span>
+                                    </div>
+                                </label>
+                            </article>
+                            
+                            <article class="option-card">
+                                <label for="queso">
+                                    <input type="radio" id="queso" name="proteina" value="queso">
+                                    <div class="option-content">
+                                        <figure class="option-icon" aria-hidden="true">🧀</figure>
+                                        <span class="option-text">Queso</span>
+                                    </div>
+                                </label>
+                            </article>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="form-section" aria-labelledby="acompanamientos-alimento-legend">
+                        <legend id="acompanamientos-alimento-legend" class="form-legend">Añade Acompañamientos</legend>
+                        <div class="checkbox-group" role="group" aria-labelledby="acompanamientos-alimento-legend">
+                            <article class="checkbox-option">
+                                <label for="aguacate">
+                                    <input type="checkbox" id="aguacate" name="acompanamientos-alimento" value="aguacate">
+                                    <span class="checkbox-text">Aguacate</span>
+                                </label>
+                            </article>
+                            
+                            <article class="checkbox-option">
+                                <label for="tomate">
+                                    <input type="checkbox" id="tomate" name="acompanamientos-alimento" value="tomate">
+                                    <span class="checkbox-text">Tomate</span>
+                                </label>
+                            </article>
+                            
+                            <article class="checkbox-option">
+                                <label for="fruta-alimento">
+                                    <input type="checkbox" id="fruta-alimento" name="acompanamientos-alimento" value="fruta">
+                                    <span class="checkbox-text">Fruta Fresca</span>
+                                </label>
+                            </article>
+                        </div>
+                    </fieldset>
+
+                    <footer class="form-actions">
+                        <button type="submit" class="btn-primary">
+                            <span class="btn-icon">🍳</span>
+                            Añadir Desayuno al Carrito
+                        </button>
+                    </footer>
+                </form>
+            </article>
+        </section>
+
+        <!-- Panel de Bebidas Calientes -->
+        <section id="bebidas-panel" class="tab-panel" role="tabpanel" aria-labelledby="bebidas-tab">
+            <article class="creation-section">
+                <header class="section-header">
+                    <h2 class="section-title">Crea tu Bebida Caliente Ideal</h2>
+                    <p class="section-description">Personaliza tu café, té o chocolate según tu gusto</p>
+                </header>
+
+                <form class="creation-form" action="#" method="post" aria-label="Formulario para crear bebida caliente personalizada">
+                    <fieldset class="form-section" aria-labelledby="tipo-bebida-legend">
+                        <legend id="tipo-bebida-legend" class="form-legend">Elige tu Bebida Base</legend>
+                        <div class="options-grid" role="radiogroup" aria-labelledby="tipo-bebida-legend">
+                            <article class="option-card">
+                                <label for="cafe-americano">
+                                    <input type="radio" id="cafe-americano" name="tipo-bebida" value="cafe-americano" required>
+                                    <div class="option-content">
+                                        <figure class="option-icon" aria-hidden="true">☕</figure>
+                                        <span class="option-text">Café Americano</span>
+                                    </div>
+                                </label>
+                            </article>
+                            
+                            <article class="option-card">
+                                <label for="cafe-con-leche">
+                                    <input type="radio" id="cafe-con-leche" name="tipo-bebida" value="cafe-con-leche">
+                                    <div class="option-content">
+                                        <figure class="option-icon" aria-hidden="true">☕</figure>
+                                        <span class="option-text">Café con Leche</span>
+                                    </div>
+                                </label>
+                            </article>
+                            
+                            <article class="option-card">
+                                <label for="capuchino">
+                                    <input type="radio" id="capuchino" name="tipo-bebida" value="capuchino">
+                                    <div class="option-content">
+                                        <figure class="option-icon" aria-hidden="true">☕</figure>
+                                        <span class="option-text">Capuchino</span>
+                                    </div>
+                                </label>
+                            </article>
+
+                            <article class="option-card">
+                                <label for="te">
+                                    <input type="radio" id="te" name="tipo-bebida" value="te">
+                                    <div class="option-content">
+                                        <figure class="option-icon" aria-hidden="true">🍵</figure>
+                                        <span class="option-text">Té</span>
+                                    </div>
+                                </label>
+                            </article>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="form-section" aria-labelledby="personalizacion-bebida-legend">
+                        <legend id="personalizacion-bebida-legend" class="form-legend">Personalización</legend>
+                        <div class="checkbox-group" role="group" aria-labelledby="personalizacion-bebida-legend">
+                            <article class="checkbox-option">
+                                <label for="azucar-bebida">
+                                    <input type="checkbox" id="azucar-bebida" name="personalizacion-bebida" value="azucar">
+                                    <span class="checkbox-text">Azúcar</span>
+                                </label>
+                            </article>
+                            
+                            <article class="checkbox-option">
+                                <label for="leche-extra">
+                                    <input type="checkbox" id="leche-extra" name="personalizacion-bebida" value="leche-extra">
+                                    <span class="checkbox-text">Leche Extra</span>
+                                </label>
+                            </article>
+                            
+                            <article class="checkbox-option">
+                                <label for="canela">
+                                    <input type="checkbox" id="canela" name="personalizacion-bebida" value="canela">
+                                    <span class="checkbox-text">Canela</span>
+                                </label>
+                            </article>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="form-section" aria-labelledby="tamano-bebida-legend">
+                        <legend id="tamano-bebida-legend" class="form-legend">Tamaño</legend>
+                        <div class="options-grid size-options" role="radiogroup" aria-labelledby="tamano-bebida-legend">
+                            <article class="option-card size-card">
+                                <label for="pequeno-bebida">
+                                    <input type="radio" id="pequeno-bebida" name="tamano-bebida" value="pequeno" required>
+                                    <div class="option-content">
+                                        <figure class="option-icon" aria-hidden="true">☕</figure>
+                                        <span class="option-text">Pequeño</span>
+                                        <span class="option-detail">200ml</span>
+                                    </div>
+                                </label>
+                            </article>
+                            
+                            <article class="option-card size-card">
+                                <label for="mediano-bebida">
+                                    <input type="radio" id="mediano-bebida" name="tamano-bebida" value="mediano">
+                                    <div class="option-content">
+                                        <figure class="option-icon" aria-hidden="true">☕</figure>
+                                        <span class="option-text">Mediano</span>
+                                        <span class="option-detail">300ml</span>
+                                    </div>
+                                </label>
+                            </article>
+                            
+                            <article class="option-card size-card">
+                                <label for="grande-bebida">
+                                    <input type="radio" id="grande-bebida" name="tamano-bebida" value="grande">
+                                    <div class="option-content">
+                                        <figure class="option-icon" aria-hidden="true">☕</figure>
+                                        <span class="option-text">Grande</span>
+                                        <span class="option-detail">400ml</span>
+                                    </div>
+                                </label>
+                            </article>
+                        </div>
+                    </fieldset>
+
+                    <footer class="form-actions">
+                        <button type="submit" class="btn-primary">
+                            <span class="btn-icon">☕</span>
+                            Añadir Bebida al Carrito
+                        </button>
+                    </footer>
+                </form>
+            </article>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Coffee Shop. Disfruta tu pedido personalizado y pide a tu gusto.</p>
+    </footer>
+
+    <script type="module" src="../js/app.js"></script>
+    <script>
+        // JavaScript para manejar las pestañas
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabButtons = document.querySelectorAll('.tab-button');
+            const tabPanels = document.querySelectorAll('.tab-panel');
+
+            tabButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const targetPanel = this.getAttribute('aria-controls');
+
+                    // Remover clase active de todos los botones y paneles
+                    tabButtons.forEach(btn => {
+                        btn.classList.remove('active');
+                        btn.setAttribute('aria-selected', 'false');
+                    });
+                    
+                    tabPanels.forEach(panel => {
+                        panel.classList.remove('active');
+                    });
+
+                    // Agregar clase active al botón clickeado y su panel correspondiente
+                    this.classList.add('active');
+                    this.setAttribute('aria-selected', 'true');
+                    document.getElementById(targetPanel).classList.add('active');
+                });
+            });
+
+            // Manejar envío de formularios
+            const forms = document.querySelectorAll('.creation-form');
+            forms.forEach(form => {
+                form.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // Obtener datos del formulario
+                    const formData = new FormData(this);
+                    const category = this.closest('.tab-panel').id.replace('-panel', '');
+                    
+                    // Simular agregado al carrito
+                    alert(`¡${category.charAt(0).toUpperCase() + category.slice(1)} agregado al carrito!`);
+                    
+                    // Limpiar formulario
+                    this.reset();
+                });
+            });
+        });
+    </script>
+</body>
+</html>
