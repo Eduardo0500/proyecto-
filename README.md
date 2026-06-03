@@ -40,9 +40,6 @@
 - ✅ **Interfaz responsiva** y moderna
 
 ---
-
-## ✅ Lista de Validaciones Integradas
-
 ### **Validaciones de Registro**
 ```javascript
 // Campos obligatorios
